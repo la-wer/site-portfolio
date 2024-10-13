@@ -6,7 +6,7 @@
 
 :root {
   --textcolor: antiquewhite;
-  --bg-url: url(./assets/bg-desktop.jpg);
+  --bg-url: url(./assets/bg-mobile.jpg);
   --tracinho: rgba(255, 255, 255, 0.5);
   --fundo: rgba(255, 255, 255, 0.1);
   --social: rgba(255, 255, 255, 0.2);
@@ -15,7 +15,7 @@
 
 .light {
   --textcolor: black;
-  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --tracinho: rgba(0, 0, 0, 0.5);
   --fundo: rgba(0, 0, 0, 0.05);
   --social: rgba(0, 0, 0, 0.1);
@@ -27,6 +27,7 @@ body {
   font-family: "Poppins", sans-serif, Arial;
   color: var(--textcolor);
   transition: background 0.3s, color 0.3s;
+  height: 100vh;
 }
 
 #container {
@@ -175,19 +176,13 @@ footer {
 
 /* Responsividade */
 
-@media (max-width: 768px) {
-  body {
-    background-size: cover;
-    background-position: center;
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
 
-  #container {
-    width: 90%;
-    padding: 0 16px;
-  }
-
-  #profile img {
-    width: 80px;
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
 
