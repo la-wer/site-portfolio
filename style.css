@@ -79,12 +79,15 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
-  transition: all 0.3s ease;
+  animation: slide-out 0.4s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--fundo);
 }
 
 #switch span {
@@ -98,7 +101,7 @@ body * {
   border-radius: 9999px;
 }
 
-#switch span::after {
+#switch span:after {
   content: "";
   position: absolute;
   width: 64px;
@@ -185,5 +188,24 @@ footer {
 
   #profile img {
     width: 80px;
+  }
+}
+
+/* Animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
