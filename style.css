@@ -164,6 +164,7 @@ ul li a ion-icon {
 
 #social-links a:hover {
   background: var(--social);
+  transform: scale(1.05);
 }
 
 /* Rodapé */
